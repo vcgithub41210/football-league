@@ -1,5 +1,6 @@
 .main{
 
+  background: linear-gradient(purple,lightblue);
   width:100vw;
   overflow: hidden;
   display: flex;
