@@ -1,6 +1,6 @@
 .main{
 
-  background: linear-gradient(purple,lightblue);
+  background: rgb(15,9,19);
   width:100vw;
   overflow: hidden;
   display: flex;
@@ -96,4 +96,30 @@
   height: inherit;
   width: 10vw;
   object-fit: contain;
+}
+
+/* Vinay's Changes */
+.header{
+  position: fixed;
+  top:0;
+  left:0;
+  height:100px;
+  background: rgb(34, 30, 37);
+  border-bottom:1px solid slategrey;
+  width: 100%;
+}
+.footer{
+  height: 100px;
+  background: black;
+  width:100%;
+}
+
+.title{
+  padding: 300px;
+  font-size: 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background: linear-gradient(to right,#0b6ccd,#24c5d7);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
