@@ -8,26 +8,13 @@ import eb from '/public/eb.jpg'
 export default function Home() {
   return (
     <main className={styles.main}>
-      <header className={styles.header}>
-        <a>Logo</a>
-        <div className={styles.links}>
-          <a>Teams</a>
-          <a>Table</a>
-          <a>Fixture</a>
-        </div>
-      </header>
+      {/* <header className={styles.header}>
+      </header> */}
       <div className={styles.title}>
-        <h1 className='hidden'>MEC Football League</h1>
+        {/* <h1 className='hidden'>MEC Football League</h1> */}
       </div>
-      <div className={styles.homecontent}>
-        <p>a website to keep track of the league season of 2nd year teams of MEC that have incredibly talented players</p>
-      </div>
-      <footer className={styles.footer}>
-        <div>
-          <a>About</a>
-          <a>Contact</a>
-        </div>
-      </footer>
+      {/* <footer className={styles.footer}>
+      </footer> */}
     </main>
     // <main className={styles.main}>
     //   <div className={styles.main}>

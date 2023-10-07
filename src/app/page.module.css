@@ -1,13 +1,30 @@
+/* Vinays changes */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* :root{
+  --clr-1:#052b2f;
+  --clr-2:#073438;
+  --clr-3:#0e4b50;
+  --clr-4:#2d8f85;
+  --clr-5:#637c54;
+} */
+
+@keyframes rotation {
+  0% { --gradient-angle: 0deg; }
+  100% { --gradient-angle: 360deg; }
+}
+/* changes end here */
+
 .main{
 
   background: rgb(15,9,19);
-  width:100vw;
-  overflow: hidden;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
 }
 .heading{
   display: flex;
@@ -99,6 +116,7 @@
 }
 
 /* Vinay's Changes */
+
 .header{
   padding: 50px;
   position: fixed;
@@ -119,35 +137,32 @@
   width:100%;
 }
 .title{
-  padding: 300px;
-  font-size: 40px;
-  background: linear-gradient(to right,#0b6ccd,#24c5d7);
+  height:60vh;
+  aspect-ratio: 1/1.5;
+  border-radius: 0.5rem;
+  position: relative;
+  /* font-size: 40px; */
+  /* background: linear-gradient(to right,#0b6ccd,#24c5d7);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
+  background-clip: text; */
 }
 
-.hidden{
-  opacity: 0;
-  transition: all 1s; 
+.title::before,
+.title::after {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    #0e4b50,
+    #2d8f85,
+    #637c54,
+    #2d8f85,
+    #0e4b50);
+  border-radius: inherit;
+  animation: rotation 20s linear infinite
 }
-
-.show{
-  opacity: 1;
-}
-
-.links{
-  width: 200px;
-  height: 100px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.homecontent{
-  font-size: 30px;
-  color: #0b6ccd;
-  width:500px;
-  min-height: 500px;
+.title::after {
+  filter: blur(3.5rem);
 }
