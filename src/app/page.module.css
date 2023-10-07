@@ -100,26 +100,54 @@
 
 /* Vinay's Changes */
 .header{
+  padding: 50px;
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   top:0;
   left:0;
   height:100px;
   background: rgb(34, 30, 37);
   border-bottom:1px solid slategrey;
   width: 100%;
+  box-shadow: 10px 10px 5px rgba(109, 111, 113, 0.406);
 }
 .footer{
   height: 100px;
   background: black;
   width:100%;
 }
-
 .title{
   padding: 300px;
   font-size: 40px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
   background: linear-gradient(to right,#0b6ccd,#24c5d7);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hidden{
+  opacity: 0;
+  transition: all 1s; 
+}
+
+.show{
+  opacity: 1;
+}
+
+.links{
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.homecontent{
+  font-size: 30px;
+  color: #0b6ccd;
+  width:500px;
+  min-height: 500px;
 }
